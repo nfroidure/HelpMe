@@ -1,0 +1,55 @@
+<html manifest="app.manifest">
+	<head>
+		<style type="text/css" media="screen">
+			@import url(css/html5.css); 
+		</style>
+		
+		<title>HTML5 test</title>
+<meta name="viewport" content="user-scalable=no, width=device-width"/>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="headerTitle"><a href="/"><span class="headerHelp">Help</span>Me!</a></div>
+		</div>
+
+		<div id="main">
+				<p>Register with the HelpMe! app<br /><small>* are required</small></p>
+			
+				<form action="/register" method="POST">
+					<p>
+						<label>Username*:<br />
+							<input type="text" name="username" required="required"/>
+						</label><br /><br />
+						<label>Tel*:<br />
+							<input type="text" name="phone" required="required"/>
+						</label><br /><br />
+						<label>Skills*:<br />
+							<select multiple="multiple" required="required">
+								<option value="health">Health</option>
+								<option value="security">Security</option>
+								<option value="directions">Directions</option>
+								<option value="places">Places</option>
+								<option value="household">Household</option>
+								<option value="off-licence-owner">Off-licence-owner</option>
+							</select>
+						</label><br /><br />
+						<label>Languages*:<br />
+							<select multiple="multiple" required="required">
+								<option value="en">English</option>
+								<option value="fr">French</option>
+								<option value="es">Spanish</option>
+								<option value="de">German</option>
+								<option value="nl">Dutch</option>
+							</select>
+						</label><br /><br />
+						<input type="submit" value="Register" class="submitButton" />
+					</p>
+				</form>
+		</div>
+
+		<div id="footer">
+			You always need help.
+		</div>
+	</body>
+</html>

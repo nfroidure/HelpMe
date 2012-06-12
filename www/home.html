@@ -1,0 +1,67 @@
+<html manifest="test.appcache">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<style type="text/css" media="screen">
+			@import url(html5.css); 
+		</style>
+		
+		<title>HTML5 test</title>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="headerTitle">Help...</div>
+			<!--<div id="tab1" class="tab"><a href="#">Home</a></div>
+			<div class="tab"><a href="#">Live</a></div>
+			<div class="tab"><a href="#">Sport</a></div>-->
+		</div>
+
+		<div id="main">
+			<!--<div style="float: left; width: 50%;">
+				<div class="doubleContentArea">random text</div>
+			</div>
+			
+			<div style="float: left; width: 50%;">
+				<div id="cont1" class="contentArea">random text</div>
+				<div class="contentArea">random text</div>
+			</div>-->
+			
+			<div id="home">
+				<div class="pwPanel">
+					<div class="pwContentAreaGet">
+						Need Help!
+					</div><br />
+
+					<div class="pwContentAreaGive">
+						<a href="offerhelp.html">Offer Help</a>
+					</div>
+				</div>
+
+				<script>
+						var source=new EventSource("SSE_test.aspx");
+						source.onmessage=function(event)
+							{
+					    	document.getElementById("result").innerHTML+=event.data + "<br />";
+					    	};
+					    	
+					   $("#tab1").click(function() {
+					    var menu = $("#cont1");
+					    if ($(menu).is(":visible")) {
+					        $(menu).animate({width: 0}, 500, function() {$(menu).hide();});
+					    } else {
+					        $(menu).show().animate({width: 1000}, 500);   
+					    }
+					});&#8203;
+				</script>
+			</div>
+
+			<div id="getHelp">
+				
+			</div>
+
+			<div id="footer">
+				HTML5 Testing
+			</div>
+		</div>
+	</body>
+</html>
